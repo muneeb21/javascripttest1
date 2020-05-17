@@ -1,0 +1,66 @@
+#upper-div{
+	height:3rem;
+	width:30%;
+	border: 1px solid black;
+	margin-top:5rem; 
+	margin-bottom: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+.addBtn{
+	height:100%;
+	width:30%;
+	background-color: #f5dede;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#myUL{
+	height:70vh;
+	width:30%;
+	display: flex;
+	flex-direction: column;
+}
+.list-div{
+	height:10%;
+	width: 100%;
+	display: flex;
+	flex-flow: row;
+   background-color:#d9eeff;
+	justify-content: space-between;
+	border: 1px solid black;
+
+}
+.todo{
+  width:70%;height: 100%;
+  /*background-color: #d9eeff;*/
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-icon{
+width: 10%;height: 100%;
+display: flex;
+align-items: center;justify-content: center;
+
+}
+.close-icon :hover{
+	background-color:#f5dede; 
+}
+
+
+
+
+

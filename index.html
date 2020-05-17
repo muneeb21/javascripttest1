@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todo-List</title>
+    <script src="https://kit.fontawesome.com/b962e18856.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="./javascripttest1.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<center>
+<div id="upper-div" class="header">
+  
+  <input type="text" id="myInput" placeholder="Type your todo list....">
+  <span onclick="newElement()" class="addBtn">Add</span>
+  
+</div>
+<div id="myUL">
+	<div class="list-div">
+  <div  class="todo">Go to college</div> 
+  	<div class="close-icon"><i class="far fa-times-circle"></i>
+  	</div>
+     </div>  
+     
+     <div class="list-div">
+  <div  class="todo">Go to gym</div> 
+  	<div class="close-icon"><i class="far fa-times-circle"></i>
+  	</div>
+     </div> 
+
+     <div class="list-div">
+  <div  class="todo">Buy Fruits</div> 
+  	<div class="close-icon"><i class="far fa-times-circle"></i>
+  	</div>
+     </div> 
+
+     <div class="list-div">
+  <div  class="todo">Watch Foolball Match</div> 
+  	<div class="close-icon"><i class="far fa-times-circle"></i>
+  	</div>
+     </div> 
+  
+
+</div>
+	</center>
+	<script type="text/javascript">
+		var close = document.getElementsByClassName("close-icon");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+  
+  function newElement() {
+  var lid = document.createElement("DIV");
+  var todo=document.createElement("DIV");
+  var closeicon=document.createElement("DIV");
+  var icon=document.createElement("I");
+  icon.className="far fa-times-circle";
+  closeicon.className="close-icon";
+  todo.className="todo";
+  closeicon.appendChild(icon);
+  
+  
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  todo.appendChild(t);
+  lid.appendChild(todo);
+  lid.appendChild(closeicon);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(lid);
+  }
+  document.getElementById("myInput").value = "";
+  lid.className="list-div";
+  
+
+
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+
+	</script>
+</body>
+
+</html>
